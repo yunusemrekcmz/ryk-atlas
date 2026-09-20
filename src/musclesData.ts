@@ -1,4 +1,15 @@
-export const musclesData = [
+export interface MuscleData {
+  id: string;
+  latin: string;
+  turkish: string;
+  english: string;
+  region: string;
+  mnemonic: string;
+  nursingNote: string;
+  clinicalImportance: string;
+}
+
+export const musclesData: MuscleData[] = [
   // Yüz ve Boyun Kasları (Facial and Neck Muscles)
   {
     id: "occipitofrontalis",
@@ -518,6 +529,4 @@ export const musclesData = [
     nursingNote: "Ayak bileği burkulmalarında (inversiyon travması) gerilir ve zorlanır.",
     clinicalImportance: "Düz tabanlığın önlenmesinde (arkı destekleyerek) rol oynar."
   }
-  // Not: 100 kaslık tam bir medikal veritabanı oldukça uzundur. 
-  // En kritik klinik, cerrahi ve hemşirelik önemine sahip kaslar seçilerek listelenmiştir.
 ];

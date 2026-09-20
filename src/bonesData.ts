@@ -237,7 +237,7 @@ export const bonesData: BoneData[] = [
 
   {
     id: 'malleus_r',
-    latin: 'Malleus Dextra',
+    latin: 'Malleus Dexter',
     turkish: 'Sağ Çekiç Kemiği',
     english: 'Right Malleus',
     region: 'İşitme',
@@ -247,7 +247,7 @@ export const bonesData: BoneData[] = [
   },
   {
     id: 'malleus_l',
-    latin: 'Malleus Sinistra',
+    latin: 'Malleus Sinister',
     turkish: 'Sol Çekiç Kemiği',
     english: 'Left Malleus',
     region: 'İşitme',
@@ -277,7 +277,7 @@ export const bonesData: BoneData[] = [
   },
   {
     id: 'stapes_r',
-    latin: 'Stapes Dextra',
+    latin: 'Stapes Dexter',
     turkish: 'Sağ Üzengi Kemiği',
     english: 'Right Stapes',
     region: 'İşitme',
@@ -287,7 +287,7 @@ export const bonesData: BoneData[] = [
   },
   {
     id: 'stapes_l',
-    latin: 'Stapes Sinistra',
+    latin: 'Stapes Sinister',
     turkish: 'Sol Üzengi Kemiği',
     english: 'Left Stapes',
     region: 'İşitme',
@@ -308,9 +308,6 @@ export const bonesData: BoneData[] = [
 
   // ============================================================================
   // OMURGA (Columna Vertebralis) - 24 Bağımsız + 1 Sakrum (5 kaynaşık) + 1 Koksiks (4 kaynaşık) = Toplam 26 yapı
-  // (Klasik 33 omur sayımı üzerinden, birleşik olmayan halini listeleyeceğiz)
-  // Toplam: C1-C7 (7), T1-T12 (12), L1-L5 (5) = 24.
-  // Sakrum'u 1 parça, Koksiks'i 1 parça kabul ediyoruz yetişkin iskelet sayımında.
   // ============================================================================
   
   {
@@ -626,10 +623,10 @@ export const bonesData: BoneData[] = [
   { id: 'rib_false_10_r', latin: 'Costa Spuria X Dextra', turkish: '10. Yalancı Kaburga (Sağ)', english: '10th False Rib (Right)', region: 'Göğüs Kafesi', mnemonic: 'Son kıkırdak yaylı kaburga.', nursingNote: 'Böbrek travması açısından idrar çıkışı ve rengi izlenir.', clinicalImportance: 'En düşük kostal marjı (Arcus costarum) oluşturur.' },
   { id: 'rib_false_10_l', latin: 'Costa Spuria X Sinistra', turkish: '10. Yalancı Kaburga (Sol)', english: '10th False Rib (Left)', region: 'Göğüs Kafesi', mnemonic: 'Son kıkırdak yaylı kaburga.', nursingNote: 'Böbrek travması.', clinicalImportance: 'En düşük kostal marjı oluşturur.' },
 
-  { id: 'rib_floating_11_r', latin: 'Costa Fluctuantes XI Dextra', turkish: '11. Yüzen Kaburga (Sağ)', english: '11th Floating Rib (Right)', region: 'Göğüs Kafesi', mnemonic: 'Yüzen (Ön tarafa bağlanmazlar).', nursingNote: 'Sırt ağrısı yapan böbrek hastalıklarında (piyelonefrit) kostovertebral açı hassasiyeti (KVAH) muayenesinde vurulan yerdir.', clinicalImportance: 'Ön ucu serbesttir. Böbreklere arkadan koruma sağlar.' },
-  { id: 'rib_floating_11_l', latin: 'Costa Fluctuantes XI Sinistra', turkish: '11. Yüzen Kaburga (Sol)', english: '11th Floating Rib (Left)', region: 'Göğüs Kafesi', mnemonic: 'Yüzen (Ön tarafa bağlanmazlar).', nursingNote: 'Böbrek taşı ağrısı bu bölgeden kasığa vurur.', clinicalImportance: 'Ön ucu serbesttir. Dalak ve böbreklere koruma sağlar.' },
-  { id: 'rib_floating_12_r', latin: 'Costa Fluctuantes XII Dextra', turkish: '12. Yüzen Kaburga (Sağ)', english: '12th Floating Rib (Right)', region: 'Göğüs Kafesi', mnemonic: 'En kısa kaburga.', nursingNote: 'Bel bölgesi cerrahilerinde anatomik sınır olarak kullanılır.', clinicalImportance: 'Sadece 12. torakal vertebraya tutunur.' },
-  { id: 'rib_floating_12_l', latin: 'Costa Fluctuantes XII Sinistra', turkish: '12. Yüzen Kaburga (Sol)', english: '12th Floating Rib (Left)', region: 'Göğüs Kafesi', mnemonic: 'En kısa kaburga.', nursingNote: 'Bazen kadınlarda "ince bel" estetiği (korse) amacıyla cerrahi olarak alınabilir (nadiren onaylanan tartışmalı bir prosedür).', clinicalImportance: 'Sadece 12. torakal vertebraya tutunur.' },
+  { id: 'rib_floating_11_r', latin: 'Costa Fluctuans XI Dextra', turkish: '11. Yüzen Kaburga (Sağ)', english: '11th Floating Rib (Right)', region: 'Göğüs Kafesi', mnemonic: 'Yüzen (Ön tarafa bağlanmazlar).', nursingNote: 'Sırt ağrısı yapan böbrek hastalıklarında (piyelonefrit) kostovertebral açı hassasiyeti (KVAH) muayenesinde vurulan yerdir.', clinicalImportance: 'Ön ucu serbesttir. Böbreklere arkadan koruma sağlar.' },
+  { id: 'rib_floating_11_l', latin: 'Costa Fluctuans XI Sinistra', turkish: '11. Yüzen Kaburga (Sol)', english: '11th Floating Rib (Left)', region: 'Göğüs Kafesi', mnemonic: 'Yüzen (Ön tarafa bağlanmazlar).', nursingNote: 'Böbrek taşı ağrısı bu bölgeden kasığa vurur.', clinicalImportance: 'Ön ucu serbesttir. Dalak ve böbreklere koruma sağlar.' },
+  { id: 'rib_floating_12_r', latin: 'Costa Fluctuans XII Dextra', turkish: '12. Yüzen Kaburga (Sağ)', english: '12th Floating Rib (Right)', region: 'Göğüs Kafesi', mnemonic: 'En kısa kaburga.', nursingNote: 'Bel bölgesi cerrahilerinde anatomik sınır olarak kullanılır.', clinicalImportance: 'Sadece 12. torakal vertebraya tutunur.' },
+  { id: 'rib_floating_12_l', latin: 'Costa Fluctuans XII Sinistra', turkish: '12. Yüzen Kaburga (Sol)', english: '12th Floating Rib (Left)', region: 'Göğüs Kafesi', mnemonic: 'En kısa kaburga.', nursingNote: 'Bazen kadınlarda "ince bel" estetiği (korse) amacıyla cerrahi olarak alınabilir (nadiren onaylanan tartışmalı bir prosedür).', clinicalImportance: 'Sadece 12. torakal vertebraya tutunur.' },
 
 
   // ============================================================================
@@ -653,19 +650,19 @@ export const bonesData: BoneData[] = [
     mnemonic: 'Sırtın kanatları.', nursingNote: 'Kas zayıflığında "Kanatlanan Skapula" (Winging scapula) görülür, N. Thoracicus Longus zedelenmesi şüphesidir.', clinicalImportance: 'Rotator kılıf kaslarının (supraspinatus vb.) origo (başlangıç) noktasıdır.'
   },
   {
-    id: 'humerus_r', latin: 'Humerus Dextra', turkish: 'Sağ Pazu (Kol) Kemiği', english: 'Right Humerus', region: 'Üst Ekstremite',
+    id: 'humerus_r', latin: 'Humerus Dexter', turkish: 'Sağ Pazu (Kol) Kemiği', english: 'Right Humerus', region: 'Üst Ekstremite',
     mnemonic: 'Humerus (Funny bone / Komik kemik) dirseğe çarparsan "humorous" olmaz, acır.', nursingNote: 'Gövde kırıklarında N. Radialis zedelenebilir, hastada "Düşük El" (bileği kaldıramama) gelişip gelişmediği kontrol edilir.', clinicalImportance: 'Üst kolun tek kemiğidir. Cerrahi boyun kırıklarında N. Axillaris zedelenebilir.'
   },
   {
-    id: 'humerus_l', latin: 'Humerus Sinistra', turkish: 'Sol Pazu (Kol) Kemiği', english: 'Left Humerus', region: 'Üst Ekstremite',
+    id: 'humerus_l', latin: 'Humerus Sinister', turkish: 'Sol Pazu (Kol) Kemiği', english: 'Left Humerus', region: 'Üst Ekstremite',
     mnemonic: 'Kolun en uzun kemiği.', nursingNote: 'Alçıya alınan kolda kompartman sendromu (aşırı şişme, morarma, şiddetli ağrı, nabız yokluğu) takibi çok acildir.', clinicalImportance: 'Dirsekte Ulnar sinir (N. Ulnaris) medial epikondil arkasından geçer (çarptığımızda elektrik çarpan yer).'
   },
   {
-    id: 'radius_r', latin: 'Radius Dextra', turkish: 'Sağ Döner Kemik', english: 'Right Radius', region: 'Üst Ekstremite',
+    id: 'radius_r', latin: 'Radius Dexter', turkish: 'Sağ Döner Kemik', english: 'Right Radius', region: 'Üst Ekstremite',
     mnemonic: 'RAdius = RAdayo anteni (Başparmak tarafındadır).', nursingNote: 'Nabız sayımının (A. Radialis) en sık yapıldığı yerdir.', clinicalImportance: 'Düşerken el açıldığında en sık kırılan kemiktir (Colles kırığı / Çatal sırtı deformitesi).'
   },
   {
-    id: 'radius_l', latin: 'Radius Sinistra', turkish: 'Sol Döner Kemik', english: 'Left Radius', region: 'Üst Ekstremite',
+    id: 'radius_l', latin: 'Radius Sinister', turkish: 'Sol Döner Kemik', english: 'Left Radius', region: 'Üst Ekstremite',
     mnemonic: 'Başparmak tarafındaki kemik.', nursingNote: 'Çocuklarda "Dadı dirseği" (Radius başı yarı çıkığı) kolun aniden çekilmesiyle olur, kol pronasyonda kilitlenir.', clinicalImportance: 'Önkola pronasyon (içe dönme) ve supinasyon (dışa dönme) yaptırır.'
   },
   {
@@ -678,35 +675,35 @@ export const bonesData: BoneData[] = [
   },
 
   // Sağ Karpaller
-  { id: 'scaphoid_r', latin: 'Os Scaphoideum Dextra', turkish: 'Sağ Sandal Kemiği', english: 'Right Scaphoid', region: 'Üst Ekstremite', mnemonic: 'Some (Scaphoid) - En dış alt.', nursingNote: 'El bileği ağrısında (enfiye çukuru hassasiyeti) röntgende kırık görülmese bile alçıya alınır, avasküler nekroz riski yüksektir.', clinicalImportance: 'Karpal kemiklerin en sık kırılanıdır.' },
-  { id: 'lunate_r', latin: 'Os Lunatum Dextra', turkish: 'Sağ Ay Kemiği', english: 'Right Lunate', region: 'Üst Ekstremite', mnemonic: 'Lovers (Lunate) - Ay şeklinde.', nursingNote: 'El bileği travmalarında çıkık şüphesi.', clinicalImportance: 'Karpal kemiklerin en sık çıkık görüleni (Luksasyon).' },
-  { id: 'triquetrum_r', latin: 'Os Triquetrum Dextra', turkish: 'Sağ Üç Köşeli Kemik', english: 'Right Triquetrum', region: 'Üst Ekstremite', mnemonic: 'Try (Triquetrum) - Üç köşeli.', nursingNote: 'Pisiform kemiğin altındadır.', clinicalImportance: 'Düşmelerde ikinci en sık kırılan karpal.' },
-  { id: 'pisiform_r', latin: 'Os Pisiforme Dextra', turkish: 'Sağ Bezelye Kemiği', english: 'Right Pisiform', region: 'Üst Ekstremite', mnemonic: 'Positions (Pisiform) - Bezelye gibi.', nursingNote: 'Bilekte ulnar sinir kılıfı Guyon kanalı üzerindedir.', clinicalImportance: 'Tendon içinde gelişen (sesamoid) bir kemiktir (M. flexor carpi ulnaris).' },
-  { id: 'trapezium_r', latin: 'Os Trapezium Dextra', turkish: 'Sağ Çok Köşeli Büyük Kemik', english: 'Right Trapezium', region: 'Üst Ekstremite', mnemonic: 'That (Trapezium) - Thumb (Başparmak) altında.', nursingNote: 'Yaşlılarda başparmak kökü ağrısı (saddle joint kireçlenmesi) sıktır.', clinicalImportance: 'Başparmak metakarpali ile eyer tipi eklem yapar (Opozisyon hareketi).' },
-  { id: 'trapezoid_r', latin: 'Os Trapezoideum Dextra', turkish: 'Sağ Çok Köşeli Küçük Kemik', english: 'Right Trapezoid', region: 'Üst Ekstremite', mnemonic: 'They (Trapezoid) - İşaret parmağı altında.', nursingNote: 'Bilek kırıkları sonrası fizik tedavi (ROM egzersizleri) kavrama gücü için şarttır.', clinicalImportance: 'Karpal dizilimin kilit taşlarındandır.' },
-  { id: 'capitate_r', latin: 'Os Capitatum Dextra', turkish: 'Sağ Başlı Kemik', english: 'Right Capitate', region: 'Üst Ekstremite', mnemonic: 'Can\'t (Capitate) - Center (Merkezde, en büyük).', nursingNote: 'Travma sonrası elin dorsalinde (sırtında) şişlik takibi.', clinicalImportance: 'En büyük karpal kemiktir.' },
-  { id: 'hamate_r', latin: 'Os Hamatum Dextra', turkish: 'Sağ Çengelli Kemik', english: 'Right Hamate', region: 'Üst Ekstremite', mnemonic: 'Handle (Hamate) - Hook (Çengeli var).', nursingNote: 'Golf veya tenis oynayanlarda veya el aletleri (çekiç) kullananlarda çengeli kırılabilir.', clinicalImportance: 'Kırıklarında ulnar sinir zedelenmesi görülebilir.' },
+  { id: 'scaphoid_r', latin: 'Os Scaphoideum Dextrum', turkish: 'Sağ Sandal Kemiği', english: 'Right Scaphoid', region: 'Üst Ekstremite', mnemonic: 'Some (Scaphoid) - En dış alt.', nursingNote: 'El bileği ağrısında (enfiye çukuru hassasiyeti) röntgende kırık görülmese bile alçıya alınır, avasküler nekroz riski yüksektir.', clinicalImportance: 'Karpal kemiklerin en sık kırılanıdır.' },
+  { id: 'lunate_r', latin: 'Os Lunatum Dextrum', turkish: 'Sağ Ay Kemiği', english: 'Right Lunate', region: 'Üst Ekstremite', mnemonic: 'Lovers (Lunate) - Ay şeklinde.', nursingNote: 'El bileği travmalarında çıkık şüphesi.', clinicalImportance: 'Karpal kemiklerin en sık çıkık görüleni (Luksasyon).' },
+  { id: 'triquetrum_r', latin: 'Os Triquetrum Dextrum', turkish: 'Sağ Üç Köşeli Kemik', english: 'Right Triquetrum', region: 'Üst Ekstremite', mnemonic: 'Try (Triquetrum) - Üç köşeli.', nursingNote: 'Pisiform kemiğin altındadır.', clinicalImportance: 'Düşmelerde ikinci en sık kırılan karpal.' },
+  { id: 'pisiform_r', latin: 'Os Pisiforme Dextrum', turkish: 'Sağ Bezelye Kemiği', english: 'Right Pisiform', region: 'Üst Ekstremite', mnemonic: 'Positions (Pisiform) - Bezelye gibi.', nursingNote: 'Bilekte ulnar sinir kılıfı Guyon kanalı üzerindedir.', clinicalImportance: 'Tendon içinde gelişen (sesamoid) bir kemiktir (M. flexor carpi ulnaris).' },
+  { id: 'trapezium_r', latin: 'Os Trapezium Dextrum', turkish: 'Sağ Çok Köşeli Büyük Kemik', english: 'Right Trapezium', region: 'Üst Ekstremite', mnemonic: 'That (Trapezium) - Thumb (Başparmak) altında.', nursingNote: 'Yaşlılarda başparmak kökü ağrısı (saddle joint kireçlenmesi) sıktır.', clinicalImportance: 'Başparmak metakarpali ile eyer tipi eklem yapar (Opozisyon hareketi).' },
+  { id: 'trapezoid_r', latin: 'Os Trapezoideum Dextrum', turkish: 'Sağ Çok Köşeli Küçük Kemik', english: 'Right Trapezoid', region: 'Üst Ekstremite', mnemonic: 'They (Trapezoid) - İşaret parmağı altında.', nursingNote: 'Bilek kırıkları sonrası fizik tedavi (ROM egzersizleri) kavrama gücü için şarttır.', clinicalImportance: 'Karpal dizilimin kilit taşlarındandır.' },
+  { id: 'capitate_r', latin: 'Os Capitatum Dextrum', turkish: 'Sağ Başlı Kemik', english: 'Right Capitate', region: 'Üst Ekstremite', mnemonic: 'Can\'t (Capitate) - Center (Merkezde, en büyük).', nursingNote: 'Travma sonrası elin dorsalinde (sırtında) şişlik takibi.', clinicalImportance: 'En büyük karpal kemiktir.' },
+  { id: 'hamate_r', latin: 'Os Hamatum Dextrum', turkish: 'Sağ Çengelli Kemik', english: 'Right Hamate', region: 'Üst Ekstremite', mnemonic: 'Handle (Hamate) - Hook (Çengeli var).', nursingNote: 'Golf veya tenis oynayanlarda veya el aletleri (çekiç) kullananlarda çengeli kırılabilir.', clinicalImportance: 'Kırıklarında ulnar sinir zedelenmesi görülebilir.' },
   
   // Sol Karpaller
-  { id: 'scaphoid_l', latin: 'Os Scaphoideum Sinistra', turkish: 'Sol Sandal Kemiği', english: 'Left Scaphoid', region: 'Üst Ekstremite', mnemonic: 'Some (Scaphoid)', nursingNote: 'Enfiye çukurunda ağrıya dikkat.', clinicalImportance: 'Kanlanması tersten olduğu için kırıkta çürüyebilir (nekroz).' },
-  { id: 'lunate_l', latin: 'Os Lunatum Sinistra', turkish: 'Sol Ay Kemiği', english: 'Left Lunate', region: 'Üst Ekstremite', mnemonic: 'Lovers (Lunate)', nursingNote: 'Median sinire baskı (Karpal Tünel) yapabilir çıkarsa.', clinicalImportance: 'Kienböck hastalığı (nekrozu) görülür.' },
-  { id: 'triquetrum_l', latin: 'Os Triquetrum Sinistra', turkish: 'Sol Üç Köşeli Kemik', english: 'Left Triquetrum', region: 'Üst Ekstremite', mnemonic: 'Try (Triquetrum)', nursingNote: 'Bilek sırtında ağrı.', clinicalImportance: 'El bileği eklemine katılır.' },
-  { id: 'pisiform_l', latin: 'Os Pisiforme Sinistra', turkish: 'Sol Bezelye Kemiği', english: 'Left Pisiform', region: 'Üst Ekstremite', mnemonic: 'Positions (Pisiform)', nursingNote: 'Dışarıdan palpe edilebilen tek karpal.', clinicalImportance: 'Kemikleşmesi en son tamamlanan karpaldir.' },
-  { id: 'trapezium_l', latin: 'Os Trapezium Sinistra', turkish: 'Sol Çok Köşeli Büyük Kemik', english: 'Left Trapezium', region: 'Üst Ekstremite', mnemonic: 'That (Trapezium)', nursingNote: 'Başparmak kireçlenmesi cerrahisi.', clinicalImportance: 'İnsanın alet kullanabilmesini sağlayan eklemin tabanıdır.' },
-  { id: 'trapezoid_l', latin: 'Os Trapezoideum Sinistra', turkish: 'Sol Çok Köşeli Küçük Kemik', english: 'Left Trapezoid', region: 'Üst Ekstremite', mnemonic: 'They (Trapezoid)', nursingNote: 'Elin kubbe yapısını korur.', clinicalImportance: '2. Metakarpal ile eklem yapar.' },
-  { id: 'capitate_l', latin: 'Os Capitatum Sinistra', turkish: 'Sol Başlı Kemik', english: 'Left Capitate', region: 'Üst Ekstremite', mnemonic: 'Can\'t (Capitate)', nursingNote: 'Elin merkez ekseni 3. parmaktan geçer.', clinicalImportance: 'Kemik yaşı tayininde önemlidir.' },
-  { id: 'hamate_l', latin: 'Os Hamatum Sinistra', turkish: 'Sol Çengelli Kemik', english: 'Left Hamate', region: 'Üst Ekstremite', mnemonic: 'Handle (Hamate)', nursingNote: 'Elde tutulan aletlerin vurduğu bölge.', clinicalImportance: 'Hamulus (çengel) kısmı Guyon kanalının dış duvarıdır.' },
+  { id: 'scaphoid_l', latin: 'Os Scaphoideum Sinistrum', turkish: 'Sol Sandal Kemiği', english: 'Left Scaphoid', region: 'Üst Ekstremite', mnemonic: 'Some (Scaphoid)', nursingNote: 'Enfiye çukurunda ağrıya dikkat.', clinicalImportance: 'Kanlanması tersten olduğu için kırıkta çürüyebilir (nekroz).' },
+  { id: 'lunate_l', latin: 'Os Lunatum Sinistrum', turkish: 'Sol Ay Kemiği', english: 'Left Lunate', region: 'Üst Ekstremite', mnemonic: 'Lovers (Lunate)', nursingNote: 'Median sinire baskı (Karpal Tünel) yapabilir çıkarsa.', clinicalImportance: 'Kienböck hastalığı (nekrozu) görülür.' },
+  { id: 'triquetrum_l', latin: 'Os Triquetrum Sinistrum', turkish: 'Sol Üç Köşeli Kemik', english: 'Left Triquetrum', region: 'Üst Ekstremite', mnemonic: 'Try (Triquetrum)', nursingNote: 'Bilek sırtında ağrı.', clinicalImportance: 'El bileği eklemine katılır.' },
+  { id: 'pisiform_l', latin: 'Os Pisiforme Sinistrum', turkish: 'Sol Bezelye Kemiği', english: 'Left Pisiform', region: 'Üst Ekstremite', mnemonic: 'Positions (Pisiform)', nursingNote: 'Dışarıdan palpe edilebilen tek karpal.', clinicalImportance: 'Kemikleşmesi en son tamamlanan karpaldir.' },
+  { id: 'trapezium_l', latin: 'Os Trapezium Sinistrum', turkish: 'Sol Çok Köşeli Büyük Kemik', english: 'Left Trapezium', region: 'Üst Ekstremite', mnemonic: 'That (Trapezium)', nursingNote: 'Başparmak kireçlenmesi cerrahisi.', clinicalImportance: 'İnsanın alet kullanabilmesini sağlayan eklemin tabanıdır.' },
+  { id: 'trapezoid_l', latin: 'Os Trapezoideum Sinistrum', turkish: 'Sol Çok Köşeli Küçük Kemik', english: 'Left Trapezoid', region: 'Üst Ekstremite', mnemonic: 'They (Trapezoid)', nursingNote: 'Elin kubbe yapısını korur.', clinicalImportance: '2. Metakarpal ile eklem yapar.' },
+  { id: 'capitate_l', latin: 'Os Capitatum Sinistrum', turkish: 'Sol Başlı Kemik', english: 'Left Capitate', region: 'Üst Ekstremite', mnemonic: 'Can\'t (Capitate)', nursingNote: 'Elin merkez ekseni 3. parmaktan geçer.', clinicalImportance: 'Kemik yaşı tayininde önemlidir.' },
+  { id: 'hamate_l', latin: 'Os Hamatum Sinistrum', turkish: 'Sol Çengelli Kemik', english: 'Left Hamate', region: 'Üst Ekstremite', mnemonic: 'Handle (Hamate)', nursingNote: 'Elde tutulan aletlerin vurduğu bölge.', clinicalImportance: 'Hamulus (çengel) kısmı Guyon kanalının dış duvarıdır.' },
 
-  { id: 'metacarpal_1_r', latin: 'Os Metacarpi I Dextra', turkish: '1. El Tarak Kemiği (Sağ Başparmak)', english: '1st Metacarpal (Right)', region: 'Üst Ekstremite', mnemonic: 'Metakarpaller tarak gibidir.', nursingNote: 'Kavga edenlerde 1. ve 5. metakarpal kırıkları sıktır.', clinicalImportance: 'Bennett veya Rolando kırığı (başparmak tabanı kırığı).' },
-  { id: 'metacarpal_1_l', latin: 'Os Metacarpi I Sinistra', turkish: '1. El Tarak Kemiği (Sol Başparmak)', english: '1st Metacarpal (Left)', region: 'Üst Ekstremite', mnemonic: 'Tarak.', nursingNote: 'Alçı parmağı içine alacak (Spica alçısı) şekilde yapılır.', clinicalImportance: 'En kısa ve kalın metakarpaldir.' },
-  { id: 'metacarpal_2_r', latin: 'Os Metacarpi II Dextra', turkish: '2. El Tarak Kemiği (Sağ İşaret)', english: '2nd Metacarpal (Right)', region: 'Üst Ekstremite', mnemonic: 'İşaret parmağı.', nursingNote: 'Parmak ucuna dolaşım (kapiller dolum) bakılır.', clinicalImportance: 'En uzun metakarpaldir.' },
-  { id: 'metacarpal_2_l', latin: 'Os Metacarpi II Sinistra', turkish: '2. El Tarak Kemiği (Sol İşaret)', english: '2nd Metacarpal (Left)', region: 'Üst Ekstremite', mnemonic: 'İşaret parmağı.', nursingNote: 'Ödem takibi.', clinicalImportance: 'Hareketi en kısıtlı olandır.' },
-  { id: 'metacarpal_3_r', latin: 'Os Metacarpi III Dextra', turkish: '3. El Tarak Kemiği (Sağ Orta)', english: '3rd Metacarpal (Right)', region: 'Üst Ekstremite', mnemonic: 'Orta parmak.', nursingNote: 'Eli kalp seviyesinde tutmak (elevasyon) ödemi engeller.', clinicalImportance: 'Capitate ile güçlü bir bağ yapar.' },
-  { id: 'metacarpal_3_l', latin: 'Os Metacarpi III Sinistra', turkish: '3. El Tarak Kemiği (Sol Orta)', english: '3rd Metacarpal (Left)', region: 'Üst Ekstremite', mnemonic: 'Orta parmak.', nursingNote: 'Elevasyon önemlidir.', clinicalImportance: 'Capitate ile güçlü bağ.' },
-  { id: 'metacarpal_4_r', latin: 'Os Metacarpi IV Dextra', turkish: '4. El Tarak Kemiği (Sağ Yüzük)', english: '4th Metacarpal (Right)', region: 'Üst Ekstremite', mnemonic: 'Yüzük parmağı.', nursingNote: 'Yüzükler, olası bir ödem durumunda kanlanmayı keseceği için hastaneye yatan hastada mutlaka çıkartılmalıdır.', clinicalImportance: 'Biraz hareketlidir (elin kubbeleşmesini sağlar).' },
-  { id: 'metacarpal_4_l', latin: 'Os Metacarpi IV Sinistra', turkish: '4. El Tarak Kemiği (Sol Yüzük)', english: '4th Metacarpal (Left)', region: 'Üst Ekstremite', mnemonic: 'Yüzük parmağı.', nursingNote: 'Ödem riski, yüzük çıkartılır.', clinicalImportance: 'Kubbeleşmeye yardım eder.' },
-  { id: 'metacarpal_5_r', latin: 'Os Metacarpi V Dextra', turkish: '5. El Tarak Kemiği (Sağ Serçe)', english: '5th Metacarpal (Right)', region: 'Üst Ekstremite', mnemonic: 'Boksör kırığı yeri (Serçe).', nursingNote: 'Duvara veya sert bir yere yumruk atma sonucu boynundan kırılır (Boksör kırığı). Ulnar oluk (gutter) ateli yapılır.', clinicalImportance: 'En hareketli ikinci metakarpaldir.' },
-  { id: 'metacarpal_5_l', latin: 'Os Metacarpi V Sinistra', turkish: '5. El Tarak Kemiği (Sol Serçe)', english: '5th Metacarpal (Left)', region: 'Üst Ekstremite', mnemonic: 'Boksör kırığı yeri (Serçe).', nursingNote: 'Öfke nöbeti sonrası el sırtında şişlik varsa kırık aranır.', clinicalImportance: 'Boksör kırığı.' },
+  { id: 'metacarpal_1_r', latin: 'Os Metacarpi I Dextrum', turkish: '1. El Tarak Kemiği (Sağ Başparmak)', english: '1st Metacarpal (Right)', region: 'Üst Ekstremite', mnemonic: 'Metakarpaller tarak gibidir.', nursingNote: 'Kavga edenlerde 1. ve 5. metakarpal kırıkları sıktır.', clinicalImportance: 'Bennett veya Rolando kırığı (başparmak tabanı kırığı).' },
+  { id: 'metacarpal_1_l', latin: 'Os Metacarpi I Sinistrum', turkish: '1. El Tarak Kemiği (Sol Başparmak)', english: '1st Metacarpal (Left)', region: 'Üst Ekstremite', mnemonic: 'Tarak.', nursingNote: 'Alçı parmağı içine alacak (Spica alçısı) şekilde yapılır.', clinicalImportance: 'En kısa ve kalın metakarpaldir.' },
+  { id: 'metacarpal_2_r', latin: 'Os Metacarpi II Dextrum', turkish: '2. El Tarak Kemiği (Sağ İşaret)', english: '2nd Metacarpal (Right)', region: 'Üst Ekstremite', mnemonic: 'İşaret parmağı.', nursingNote: 'Parmak ucuna dolaşım (kapiller dolum) bakılır.', clinicalImportance: 'En uzun metakarpaldir.' },
+  { id: 'metacarpal_2_l', latin: 'Os Metacarpi II Sinistrum', turkish: '2. El Tarak Kemiği (Sol İşaret)', english: '2nd Metacarpal (Left)', region: 'Üst Ekstremite', mnemonic: 'İşaret parmağı.', nursingNote: 'Ödem takibi.', clinicalImportance: 'Hareketi en kısıtlı olandır.' },
+  { id: 'metacarpal_3_r', latin: 'Os Metacarpi III Dextrum', turkish: '3. El Tarak Kemiği (Sağ Orta)', english: '3rd Metacarpal (Right)', region: 'Üst Ekstremite', mnemonic: 'Orta parmak.', nursingNote: 'Eli kalp seviyesinde tutmak (elevasyon) ödemi engeller.', clinicalImportance: 'Capitate ile güçlü bir bağ yapar.' },
+  { id: 'metacarpal_3_l', latin: 'Os Metacarpi III Sinistrum', turkish: '3. El Tarak Kemiği (Sol Orta)', english: '3rd Metacarpal (Left)', region: 'Üst Ekstremite', mnemonic: 'Orta parmak.', nursingNote: 'Elevasyon önemlidir.', clinicalImportance: 'Capitate ile güçlü bağ.' },
+  { id: 'metacarpal_4_r', latin: 'Os Metacarpi IV Dextrum', turkish: '4. El Tarak Kemiği (Sağ Yüzük)', english: '4th Metacarpal (Right)', region: 'Üst Ekstremite', mnemonic: 'Yüzük parmağı.', nursingNote: 'Yüzükler, olası bir ödem durumunda kanlanmayı keseceği için hastaneye yatan hastada mutlaka çıkartılmalıdır.', clinicalImportance: 'Biraz hareketlidir (elin kubbeleşmesini sağlar).' },
+  { id: 'metacarpal_4_l', latin: 'Os Metacarpi IV Sinistrum', turkish: '4. El Tarak Kemiği (Sol Yüzük)', english: '4th Metacarpal (Left)', region: 'Üst Ekstremite', mnemonic: 'Yüzük parmağı.', nursingNote: 'Ödem riski, yüzük çıkartılır.', clinicalImportance: 'Kubbeleşmeye yardım eder.' },
+  { id: 'metacarpal_5_r', latin: 'Os Metacarpi V Dextrum', turkish: '5. El Tarak Kemiği (Sağ Serçe)', english: '5th Metacarpal (Right)', region: 'Üst Ekstremite', mnemonic: 'Boksör kırığı yeri (Serçe).', nursingNote: 'Duvara veya sert bir yere yumruk atma sonucu boynundan kırılır (Boksör kırığı). Ulnar oluk (gutter) ateli yapılır.', clinicalImportance: 'En hareketli ikinci metakarpaldir.' },
+  { id: 'metacarpal_5_l', latin: 'Os Metacarpi V Sinistrum', turkish: '5. El Tarak Kemiği (Sol Serçe)', english: '5th Metacarpal (Left)', region: 'Üst Ekstremite', mnemonic: 'Boksör kırığı yeri (Serçe).', nursingNote: 'Öfke nöbeti sonrası el sırtında şişlik varsa kırık aranır.', clinicalImportance: 'Boksör kırığı.' },
 
   // Sağ El Falanksları (Başparmakta 2, diğerlerinde 3 = Toplam 14)
   { id: 'proximal_phalanx_1_r', latin: 'Phalanx Proximalis I Dextra', turkish: '1. Yakın (Proksimal) Parmak Kemiği (Sağ Başparmak)', english: 'Proximal Phalanx 1st Digit (Right)', region: 'Üst Ekstremite', mnemonic: 'Phalanx = Roma askeri dizilimi.', nursingNote: 'Parmak ucu kırık/kopmalarında (amputasyon) kopan parça nemli/soğuk beze sarılıp buzlu torbaya KONMAZ (donma riski), su geçirmez poşete konup buzlu suya atılır.', clinicalImportance: 'Başparmakta medial phalanx (orta) YOKTUR.' },
@@ -752,43 +749,41 @@ export const bonesData: BoneData[] = [
   // ============================================================================
   // ALT EKSTREMİTE (Pelvis ve Bacaklar) - 62 Kemik (31 x 2)
   // Not: Pelvis (Os Coxae) erişkinde 3 kemiğin (Ilium, Ischium, Pubis) kaynaşmasıdır.
-  // Geleneksel 206 sayımında Os Coxae "1 kemik" (sağ/sol toplam 2) olarak sayılır.
-  // Ancak detaylı öğrenim için 3 parçası ayrıştırılarak listelenmiştir.
   // ============================================================================
 
   // Sağ Pelvis Parçaları
   {
-    id: 'ilium_r', latin: 'Os Ilium Dextra', turkish: 'Sağ Leğen (Böğür) Kemiği', english: 'Right Ilium', region: 'Alt Ekstremite',
+    id: 'ilium_r', latin: 'Os Ilium Dextrum', turkish: 'Sağ Leğen (Böğür) Kemiği', english: 'Right Ilium', region: 'Alt Ekstremite',
     mnemonic: 'İliyak kanat (Fil kulağı).', nursingNote: 'Kemik iliği biyopsisi ve aspirasyonu en sık Posterior Superior İliyak Spina (PSIS) yani kalçanın üst arka çıkıntısından yapılır.', clinicalImportance: 'Pelvisin en büyük parçasıdır, kalça eklemi yuvasının (asetabulum) büyük kısmını oluşturur.'
   },
   {
-    id: 'ischium_r', latin: 'Os Ischii Dextra', turkish: 'Sağ Oturga Kemiği', english: 'Right Ischium', region: 'Alt Ekstremite',
+    id: 'ischium_r', latin: 'Os Ischii Dextrum', turkish: 'Sağ Oturga Kemiği', english: 'Right Ischium', region: 'Alt Ekstremite',
     mnemonic: 'İşkembe üstüne oturulmaz, İskiyum üstüne oturulur.', nursingNote: 'Tekerlekli sandalyeye bağımlı hastalarda İskial tüberosit (oturma kemiği) üzerinde yatak yarası (bası ülseri) çok hızlı açılır. Havalı minder şarttır.', clinicalImportance: 'Oturduğumuzda ağırlığımızı taşıyan kemiktir (Tuber ischiadicum).'
   },
   {
-    id: 'pubis_r', latin: 'Os Pubis Dextra', turkish: 'Sağ Çatı Kemiği', english: 'Right Pubis', region: 'Alt Ekstremite',
+    id: 'pubis_r', latin: 'Os Pubis Dextrum', turkish: 'Sağ Çatı Kemiği', english: 'Right Pubis', region: 'Alt Ekstremite',
     mnemonic: 'Pubis = Kasık bölgesi (Pubik kıl).', nursingNote: 'Pelvis kırıkları mesane (idrar kesesi) veya üretra yırtılmasına yol açabilir. Sonda takılırken kan gelirse (üretral kanama) üroloji uzmanı beklenir, zorlanmaz.', clinicalImportance: 'Önde iki pubis kemiği birleşerek Symphysis Pubis eklemini yapar (doğumda esner).'
   },
   // Sol Pelvis Parçaları
   {
-    id: 'ilium_l', latin: 'Os Ilium Sinistra', turkish: 'Sol Leğen (Böğür) Kemiği', english: 'Left Ilium', region: 'Alt Ekstremite',
+    id: 'ilium_l', latin: 'Os Ilium Sinistrum', turkish: 'Sol Leğen (Böğür) Kemiği', english: 'Left Ilium', region: 'Alt Ekstremite',
     mnemonic: 'İliyak kanat (Fil kulağı).', nursingNote: 'İntramüsküler (İM) enjeksiyon yapılırken iliyak krista nirengi noktası alınır (Ventrogluteal bölge için güvenli alan tayini).', clinicalImportance: 'Geniş kas tutunma yüzeyidir.'
   },
   {
-    id: 'ischium_l', latin: 'Os Ischii Sinistra', turkish: 'Sol Oturga Kemiği', english: 'Left Ischium', region: 'Alt Ekstremite',
+    id: 'ischium_l', latin: 'Os Ischii Sinistrum', turkish: 'Sol Oturga Kemiği', english: 'Left Ischium', region: 'Alt Ekstremite',
     mnemonic: 'Oturduğumuz kemik.', nursingNote: 'Oturma pozisyonunda saatte bir ağırlık aktarımı (shift) eğitimi verilir.', clinicalImportance: 'Hamstring (arka bacak) kasları buradan başlar.'
   },
   {
-    id: 'pubis_l', latin: 'Os Pubis Sinistra', turkish: 'Sol Çatı Kemiği', english: 'Left Pubis', region: 'Alt Ekstremite',
+    id: 'pubis_l', latin: 'Os Pubis Sinistrum', turkish: 'Sol Çatı Kemiği', english: 'Left Pubis', region: 'Alt Ekstremite',
     mnemonic: 'Pubis.', nursingNote: 'Ağır pelvik travmalarda iç kanama hayatı tehdit eder, pelvik bağlayıcı (binder) takılır.', clinicalImportance: 'Mesanenin hemen önünde yer alır korur.'
   },
 
   {
-    id: 'femur_r', latin: 'Os Femoris Dextra', turkish: 'Sağ Uyluk Kemiği', english: 'Right Femur', region: 'Alt Ekstremite',
+    id: 'femur_r', latin: 'Os Femoris Dextrum', turkish: 'Sağ Uyluk Kemiği', english: 'Right Femur', region: 'Alt Ekstremite',
     mnemonic: 'Ferrari = En uzun, en hızlı (koşmak için), en güçlü kemik.', nursingNote: 'Yaşlılarda osteoporoz nedeniyle en sık "Femur Boyun Kırığı" görülür. Hasta bacağını dışa dönük ve kısa tutar. Ameliyat sonrası bacak bacak üstüne atması (çıkık riski) yasaklanır.', clinicalImportance: 'Kırıklarında uyluk içine 1.5 - 2 litre kanayabilir (hipovolemik şok riski).'
   },
   {
-    id: 'femur_l', latin: 'Os Femoris Sinistra', turkish: 'Sol Uyluk Kemiği', english: 'Left Femur', region: 'Alt Ekstremite',
+    id: 'femur_l', latin: 'Os Femoris Sinistrum', turkish: 'Sol Uyluk Kemiği', english: 'Left Femur', region: 'Alt Ekstremite',
     mnemonic: 'Vücudun en uzun kemiği.', nursingNote: 'Femur kırıklarında yağ embolisi riski yüksektir (hasta aniden nefes darlığı ve göğüs ağrısı çekerse akla gelmelidir).', clinicalImportance: 'Büyük trokanter (Trochanter major) dışarıdan kalçada elle hissedilen çıkıntıdır.'
   },
   {
@@ -817,33 +812,33 @@ export const bonesData: BoneData[] = [
   },
 
   // Sağ Tarsaller
-  { id: 'talus_r', latin: 'Talus Dextra', turkish: 'Sağ Aşık Kemiği', english: 'Right Talus', region: 'Alt Ekstremite', mnemonic: 'Talus = Tavan (Ayağın çatısı, tibia ona oturur).', nursingNote: 'Ayak bileği burkulmalarında en çok zorlanan eklemi oluşturur, elevasyon (yukarı kaldırma) şarttır.', clinicalImportance: 'Kanlanması zayıftır, kırığında avasküler nekroz (çürüme) sıktır. Kas tutunmayan tek ayak kemiğidir.' },
-  { id: 'calcaneus_r', latin: 'Calcaneus Dextra', turkish: 'Sağ Topuk Kemiği', english: 'Right Calcaneus (Heel bone)', region: 'Alt Ekstremite', mnemonic: 'Kalk (Calcaneus) ve topuğuna bas.', nursingNote: 'Uzun süre yatan hastada topuklarda yatak yarası (dekübit) oluşur, topukların altına rulo havlu konarak yatağa teması kesilmelidir.', clinicalImportance: 'Ayaktaki en büyük kemiktir. Yüksekten topuk üstüne düşmelerde kırılır (Aşil tendonu buraya tutunur).' },
-  { id: 'navicular_r', latin: 'Os Naviculare Dextra', turkish: 'Sağ Sandal Kemiği (Ayak)', english: 'Right Navicular', region: 'Alt Ekstremite', mnemonic: 'Navigasyon (Navicular) gemisi sandaldır.', nursingNote: 'Düz taban (pes planus) teşhisinde yere olan yüksekliğine bakılır.', clinicalImportance: 'Ayağın uzunlamasına kemerinin (arkının) tepe noktasıdır.' },
-  { id: 'cuboid_r', latin: 'Os Cuboideum Dextra', turkish: 'Sağ Küp Kemiği', english: 'Right Cuboid', region: 'Alt Ekstremite', mnemonic: 'Küp şeklinde, ayağın dış tarafında.', nursingNote: 'Dış yan basma (inversiyon) burkulmalarında ağrır.', clinicalImportance: 'Ayağın dış kemerini (lateral ark) destekler.' },
-  { id: 'medial_cuneiform_r', latin: 'Os Cuneiforme Mediale Dextra', turkish: 'Sağ İç Kama Kemiği', english: 'Right Medial Cuneiform', region: 'Alt Ekstremite', mnemonic: 'Kama (Cuneiform) - 3 tanedir.', nursingNote: 'Diyabetik ayak ülserleri bu basınç noktalarında açılabilir, günlük ayak bakımı eğitimi verilir.', clinicalImportance: 'Başparmak metatarsali (1.) ile eklem yapar.' },
-  { id: 'intermediate_cuneiform_r', latin: 'Os Cuneiforme Intermedium Dextra', turkish: 'Sağ Orta Kama Kemiği', english: 'Right Intermediate Cuneiform', region: 'Alt Ekstremite', mnemonic: 'Ortadaki kama.', nursingNote: 'Uygun ayakkabı seçimi ortopedik olarak önemlidir.', clinicalImportance: '2. metatarsal ile eklem yapar (Lisfranc ekleminin kilit taşı).' },
-  { id: 'lateral_cuneiform_r', latin: 'Os Cuneiforme Laterale Dextra', turkish: 'Sağ Dış Kama Kemiği', english: 'Right Lateral Cuneiform', region: 'Alt Ekstremite', mnemonic: 'Dıştaki kama.', nursingNote: 'Ayak arkı çöktüğünde yürüyüş bozukluğu oluşur.', clinicalImportance: '3. metatarsal ile eklem yapar.' },
+  { id: 'talus_r', latin: 'Talus Dexter', turkish: 'Sağ Aşık Kemiği', english: 'Right Talus', region: 'Alt Ekstremite', mnemonic: 'Talus = Tavan (Ayağın çatısı, tibia ona oturur).', nursingNote: 'Ayak bileği burkulmalarında en çok zorlanan eklemi oluşturur, elevasyon (yukarı kaldırma) şarttır.', clinicalImportance: 'Kanlanması zayıftır, kırığında avasküler nekroz (çürüme) sıktır. Kas tutunmayan tek ayak kemiğidir.' },
+  { id: 'calcaneus_r', latin: 'Calcaneus Dexter', turkish: 'Sağ Topuk Kemiği', english: 'Right Calcaneus (Heel bone)', region: 'Alt Ekstremite', mnemonic: 'Kalk (Calcaneus) ve topuğuna bas.', nursingNote: 'Uzun süre yatan hastada topuklarda yatak yarası (dekübit) oluşur, topukların altına rulo havlu konarak yatağa teması kesilmelidir.', clinicalImportance: 'Ayaktaki en büyük kemiktir. Yüksekten topuk üstüne düşmelerde kırılır (Aşil tendonu buraya tutunur).' },
+  { id: 'navicular_r', latin: 'Os Naviculare Dextrum', turkish: 'Sağ Sandal Kemiği (Ayak)', english: 'Right Navicular', region: 'Alt Ekstremite', mnemonic: 'Navigasyon (Navicular) gemisi sandaldır.', nursingNote: 'Düz taban (pes planus) teşhisinde yere olan yüksekliğine bakılır.', clinicalImportance: 'Ayağın uzunlamasına kemerinin (arkının) tepe noktasıdır.' },
+  { id: 'cuboid_r', latin: 'Os Cuboideum Dextrum', turkish: 'Sağ Küp Kemiği', english: 'Right Cuboid', region: 'Alt Ekstremite', mnemonic: 'Küp şeklinde, ayağın dış tarafında.', nursingNote: 'Dış yan basma (inversiyon) burkulmalarında ağrır.', clinicalImportance: 'Ayağın dış kemerini (lateral ark) destekler.' },
+  { id: 'medial_cuneiform_r', latin: 'Os Cuneiforme Mediale Dextrum', turkish: 'Sağ İç Kama Kemiği', english: 'Right Medial Cuneiform', region: 'Alt Ekstremite', mnemonic: 'Kama (Cuneiform) - 3 tanedir.', nursingNote: 'Diyabetik ayak ülserleri bu basınç noktalarında açılabilir, günlük ayak bakımı eğitimi verilir.', clinicalImportance: 'Başparmak metatarsali (1.) ile eklem yapar.' },
+  { id: 'intermediate_cuneiform_r', latin: 'Os Cuneiforme Intermedium Dextrum', turkish: 'Sağ Orta Kama Kemiği', english: 'Right Intermediate Cuneiform', region: 'Alt Ekstremite', mnemonic: 'Ortadaki kama.', nursingNote: 'Uygun ayakkabı seçimi ortopedik olarak önemlidir.', clinicalImportance: '2. metatarsal ile eklem yapar (Lisfranc ekleminin kilit taşı).' },
+  { id: 'lateral_cuneiform_r', latin: 'Os Cuneiforme Laterale Dextrum', turkish: 'Sağ Dış Kama Kemiği', english: 'Right Lateral Cuneiform', region: 'Alt Ekstremite', mnemonic: 'Dıştaki kama.', nursingNote: 'Ayak arkı çöktüğünde yürüyüş bozukluğu oluşur.', clinicalImportance: '3. metatarsal ile eklem yapar.' },
   
   // Sol Tarsaller
-  { id: 'talus_l', latin: 'Talus Sinistra', turkish: 'Sol Aşık Kemiği', english: 'Left Talus', region: 'Alt Ekstremite', mnemonic: 'Tavan (Tibia buna oturur).', nursingNote: 'RICE (Rest, Ice, Compression, Elevation) burkulma ilkyardımıdır.', clinicalImportance: 'Avasküler nekroz riski.' },
-  { id: 'calcaneus_l', latin: 'Calcaneus Sinistra', turkish: 'Sol Topuk Kemiği', english: 'Left Calcaneus', region: 'Alt Ekstremite', mnemonic: 'Kalk (Calcaneus).', nursingNote: 'Topuk vurma yürüyüş fazında yük taşır. Topuk dikeni (plantar fasiit) burada olur.', clinicalImportance: 'Topuk dikeni yeri.' },
-  { id: 'navicular_l', latin: 'Os Naviculare Sinistra', turkish: 'Sol Sandal Kemiği (Ayak)', english: 'Left Navicular', region: 'Alt Ekstremite', mnemonic: 'Sandal.', nursingNote: 'Ark çökmesi.', clinicalImportance: 'Medial longitudinal arkın merkez taşı.' },
-  { id: 'cuboid_l', latin: 'Os Cuboideum Sinistra', turkish: 'Sol Küp Kemiği', english: 'Left Cuboid', region: 'Alt Ekstremite', mnemonic: 'Küp.', nursingNote: 'Ayağın dış tarafı.', clinicalImportance: 'Lateral ark desteği.' },
-  { id: 'medial_cuneiform_l', latin: 'Os Cuneiforme Mediale Sinistra', turkish: 'Sol İç Kama Kemiği', english: 'Left Medial Cuneiform', region: 'Alt Ekstremite', mnemonic: 'Kama (İç).', nursingNote: 'Diyabetik ayak kontrolü.', clinicalImportance: '1. parmak kökü.' },
-  { id: 'intermediate_cuneiform_l', latin: 'Os Cuneiforme Intermedium Sinistra', turkish: 'Sol Orta Kama Kemiği', english: 'Left Intermediate Cuneiform', region: 'Alt Ekstremite', mnemonic: 'Kama (Orta).', nursingNote: 'Ortopedik tabanlık (pes planus için).', clinicalImportance: 'Lisfranc eklemi nirengisi.' },
-  { id: 'lateral_cuneiform_l', latin: 'Os Cuneiforme Laterale Sinistra', turkish: 'Sol Dış Kama Kemiği', english: 'Left Lateral Cuneiform', region: 'Alt Ekstremite', mnemonic: 'Kama (Dış).', nursingNote: 'Ayak anatomisini koruma.', clinicalImportance: '3. metatarsa tutunur.' },
+  { id: 'talus_l', latin: 'Talus Sinister', turkish: 'Sol Aşık Kemiği', english: 'Left Talus', region: 'Alt Ekstremite', mnemonic: 'Tavan (Tibia buna oturur).', nursingNote: 'RICE (Rest, Ice, Compression, Elevation) burkulma ilkyardımıdır.', clinicalImportance: 'Avasküler nekroz riski.' },
+  { id: 'calcaneus_l', latin: 'Calcaneus Sinister', turkish: 'Sol Topuk Kemiği', english: 'Left Calcaneus', region: 'Alt Ekstremite', mnemonic: 'Kalk (Calcaneus).', nursingNote: 'Topuk vurma yürüyüş fazında yük taşır. Topuk dikeni (plantar fasiit) burada olur.', clinicalImportance: 'Topuk dikeni yeri.' },
+  { id: 'navicular_l', latin: 'Os Naviculare Sinistrum', turkish: 'Sol Sandal Kemiği (Ayak)', english: 'Left Navicular', region: 'Alt Ekstremite', mnemonic: 'Sandal.', nursingNote: 'Ark çökmesi.', clinicalImportance: 'Medial longitudinal arkın merkez taşı.' },
+  { id: 'cuboid_l', latin: 'Os Cuboideum Sinistrum', turkish: 'Sol Küp Kemiği', english: 'Left Cuboid', region: 'Alt Ekstremite', mnemonic: 'Küp.', nursingNote: 'Ayağın dış tarafı.', clinicalImportance: 'Lateral ark desteği.' },
+  { id: 'medial_cuneiform_l', latin: 'Os Cuneiforme Mediale Sinistrum', turkish: 'Sol İç Kama Kemiği', english: 'Left Medial Cuneiform', region: 'Alt Ekstremite', mnemonic: 'Kama (İç).', nursingNote: 'Diyabetik ayak kontrolü.', clinicalImportance: '1. parmak kökü.' },
+  { id: 'intermediate_cuneiform_l', latin: 'Os Cuneiforme Intermedium Sinistrum', turkish: 'Sol Orta Kama Kemiği', english: 'Left Intermediate Cuneiform', region: 'Alt Ekstremite', mnemonic: 'Kama (Orta).', nursingNote: 'Ortopedik tabanlık (pes planus için).', clinicalImportance: 'Lisfranc eklemi nirengisi.' },
+  { id: 'lateral_cuneiform_l', latin: 'Os Cuneiforme Laterale Sinistrum', turkish: 'Sol Dış Kama Kemiği', english: 'Left Lateral Cuneiform', region: 'Alt Ekstremite', mnemonic: 'Kama (Dış).', nursingNote: 'Ayak anatomisini koruma.', clinicalImportance: '3. metatarsa tutunur.' },
 
-  { id: 'metatarsal_1_r', latin: 'Os Metatarsi I Dextra', turkish: '1. Ayak Tarak Kemiği (Sağ)', english: '1st Metatarsal (Right)', region: 'Alt Ekstremite', mnemonic: 'Ayak başparmağı kökü.', nursingNote: 'Gut hastalığında en sık buradaki eklem şişer, kızarır ve çok ağrılı olur (Podagra). Çarşaf değmesi bile ağrıtır, yatak örtüsü ayak ucuna yükseltilerek serilir (bed cradle).', clinicalImportance: 'Halluks Valgus (başparmak çıkıntısı) bu kemiğin başının dışarı doğru eğilmesidir.' },
-  { id: 'metatarsal_1_l', latin: 'Os Metatarsi I Sinistra', turkish: '1. Ayak Tarak Kemiği (Sol)', english: '1st Metatarsal (Left)', region: 'Alt Ekstremite', mnemonic: 'Ayak başparmağı kökü.', nursingNote: 'Gut atağında diyet (pürinden fakir) ve ağrı kontrolü.', clinicalImportance: 'Vücut ağırlığını taşımada çok aktiftir, altındaki sesamoid kemikler yürümeyi kolaylaştırır.' },
-  { id: 'metatarsal_2_r', latin: 'Os Metatarsi II Dextra', turkish: '2. Ayak Tarak Kemiği (Sağ)', english: '2nd Metatarsal (Right)', region: 'Alt Ekstremite', mnemonic: '2. parmak.', nursingNote: 'Askerlerde veya çok yürüyenlerde stres (yorgunluk) kırığı en sık bu kemikte görülür (March fracture / Yürüyüş kırığı).', clinicalImportance: 'Ayağın en uzun metatarsalidir.' },
-  { id: 'metatarsal_2_l', latin: 'Os Metatarsi II Sinistra', turkish: '2. Ayak Tarak Kemiği (Sol)', english: '2nd Metatarsal (Left)', region: 'Alt Ekstremite', mnemonic: '2. parmak.', nursingNote: 'Yeni spora başlayanlarda ayak üstünde şişlik/ağrı (stres kırığı şüphesi).', clinicalImportance: 'Uzun olduğu için kırılmaya yatkındır.' },
-  { id: 'metatarsal_3_r', latin: 'Os Metatarsi III Dextra', turkish: '3. Ayak Tarak Kemiği (Sağ)', english: '3rd Metatarsal (Right)', region: 'Alt Ekstremite', mnemonic: '3. parmak.', nursingNote: '3. ve 4. parmak arasında Morton Nöroması (sinir sıkışması) sık olur, ayakkabı vurdukça elektrik çarpar gibi ağrı yapar.', clinicalImportance: 'Merkezi metatarsal.' },
-  { id: 'metatarsal_3_l', latin: 'Os Metatarsi III Sinistra', turkish: '3. Ayak Tarak Kemiği (Sol)', english: '3rd Metatarsal (Left)', region: 'Alt Ekstremite', mnemonic: '3. parmak.', nursingNote: 'Geniş burunlu ayakkabı önerilir.', clinicalImportance: 'Transvers ark parçası.' },
-  { id: 'metatarsal_4_r', latin: 'Os Metatarsi IV Dextra', turkish: '4. Ayak Tarak Kemiği (Sağ)', english: '4th Metatarsal (Right)', region: 'Alt Ekstremite', mnemonic: '4. parmak.', nursingNote: 'Travmalarda ezilme riski.', clinicalImportance: 'Dış ağırlık aktarımı.' },
-  { id: 'metatarsal_4_l', latin: 'Os Metatarsi IV Sinistra', turkish: '4. Ayak Tarak Kemiği (Sol)', english: '4th Metatarsal (Left)', region: 'Alt Ekstremite', mnemonic: '4. parmak.', nursingNote: 'Diyabetik hastada hissizlik (nöropati) varsa ayakkabı içini eliyle kontrol etmeli (taş vs. varsa hissetmez, yara açılır).', clinicalImportance: 'Dış ağırlık aktarımı.' },
-  { id: 'metatarsal_5_r', latin: 'Os Metatarsi V Dextra', turkish: '5. Ayak Tarak Kemiği (Sağ)', english: '5th Metatarsal (Right)', region: 'Alt Ekstremite', mnemonic: 'Serçe parmak kökü.', nursingNote: 'Bilek burkulmalarında bu kemiğin kökü (bazis) koparak kırılabilir (Jones kırığı). Alçı tedavisi uzundur.', clinicalImportance: 'M. Peroneus brevis tendonu buraya tutunur ve burkulmada kemiği koparabilir.' },
-  { id: 'metatarsal_5_l', latin: 'Os Metatarsi V Sinistra', turkish: '5. Ayak Tarak Kemiği (Sol)', english: '5th Metatarsal (Left)', region: 'Alt Ekstremite', mnemonic: 'Serçe parmak kökü.', nursingNote: 'Ayak dış yanına basamama şikayeti (Jones kırığı şüphesi).', clinicalImportance: 'Avülsiyon (kopma) kırığı sıktır.' },
+  { id: 'metatarsal_1_r', latin: 'Os Metatarsi I Dextrum', turkish: '1. Ayak Tarak Kemiği (Sağ)', english: '1st Metatarsal (Right)', region: 'Alt Ekstremite', mnemonic: 'Ayak başparmağı kökü.', nursingNote: 'Gut hastalığında en sık buradaki eklem şişer, kızarır ve çok ağrılı olur (Podagra). Çarşaf değmesi bile ağrıtır, yatak örtüsü ayak ucuna yükseltilerek serilir (bed cradle).', clinicalImportance: 'Halluks Valgus (başparmak çıkıntısı) bu kemiğin başının dışarı doğru eğilmesidir.' },
+  { id: 'metatarsal_1_l', latin: 'Os Metatarsi I Sinistrum', turkish: '1. Ayak Tarak Kemiği (Sol)', english: '1st Metatarsal (Left)', region: 'Alt Ekstremite', mnemonic: 'Ayak başparmağı kökü.', nursingNote: 'Gut atağında diyet (pürinden fakir) ve ağrı kontrolü.', clinicalImportance: 'Vücut ağırlığını taşımada çok aktiftir, altındaki sesamoid kemikler yürümeyi kolaylaştırır.' },
+  { id: 'metatarsal_2_r', latin: 'Os Metatarsi II Dextrum', turkish: '2. Ayak Tarak Kemiği (Sağ)', english: '2nd Metatarsal (Right)', region: 'Alt Ekstremite', mnemonic: '2. parmak.', nursingNote: 'Askerlerde veya çok yürüyenlerde stres (yorgunluk) kırığı en sık bu kemikte görülür (March fracture / Yürüyüş kırığı).', clinicalImportance: 'Ayağın en uzun metatarsalidir.' },
+  { id: 'metatarsal_2_l', latin: 'Os Metatarsi II Sinistrum', turkish: '2. Ayak Tarak Kemiği (Sol)', english: '2nd Metatarsal (Left)', region: 'Alt Ekstremite', mnemonic: '2. parmak.', nursingNote: 'Yeni spora başlayanlarda ayak üstünde şişlik/ağrı (stres kırığı şüphesi).', clinicalImportance: 'Uzun olduğu için kırılmaya yatkındır.' },
+  { id: 'metatarsal_3_r', latin: 'Os Metatarsi III Dextrum', turkish: '3. Ayak Tarak Kemiği (Sağ)', english: '3rd Metatarsal (Right)', region: 'Alt Ekstremite', mnemonic: '3. parmak.', nursingNote: '3. ve 4. parmak arasında Morton Nöroması (sinir sıkışması) sık olur, ayakkabı vurdukça elektrik çarpar gibi ağrı yapar.', clinicalImportance: 'Merkezi metatarsal.' },
+  { id: 'metatarsal_3_l', latin: 'Os Metatarsi III Sinistrum', turkish: '3. Ayak Tarak Kemiği (Sol)', english: '3rd Metatarsal (Left)', region: 'Alt Ekstremite', mnemonic: '3. parmak.', nursingNote: 'Geniş burunlu ayakkabı önerilir.', clinicalImportance: 'Transvers ark parçası.' },
+  { id: 'metatarsal_4_r', latin: 'Os Metatarsi IV Dextrum', turkish: '4. Ayak Tarak Kemiği (Sağ)', english: '4th Metatarsal (Right)', region: 'Alt Ekstremite', mnemonic: '4. parmak.', nursingNote: 'Travmalarda ezilme riski.', clinicalImportance: 'Dış ağırlık aktarımı.' },
+  { id: 'metatarsal_4_l', latin: 'Os Metatarsi IV Sinistrum', turkish: '4. Ayak Tarak Kemiği (Sol)', english: '4th Metatarsal (Left)', region: 'Alt Ekstremite', mnemonic: '4. parmak.', nursingNote: 'Diyabetik hastada hissizlik (nöropati) varsa ayakkabı içini eliyle kontrol etmeli (taş vs. varsa hissetmez, yara açılır).', clinicalImportance: 'Dış ağırlık aktarımı.' },
+  { id: 'metatarsal_5_r', latin: 'Os Metatarsi V Dextrum', turkish: '5. Ayak Tarak Kemiği (Sağ)', english: '5th Metatarsal (Right)', region: 'Alt Ekstremite', mnemonic: 'Serçe parmak kökü.', nursingNote: 'Bilek burkulmalarında bu kemiğin kökü (bazis) koparak kırılabilir (Jones kırığı). Alçı tedavisi uzundur.', clinicalImportance: 'M. Peroneus brevis tendonu buraya tutunur ve burkulmada kemiği koparabilir.' },
+  { id: 'metatarsal_5_l', latin: 'Os Metatarsi V Sinistrum', turkish: '5. Ayak Tarak Kemiği (Sol)', english: '5th Metatarsal (Left)', region: 'Alt Ekstremite', mnemonic: 'Serçe parmak kökü.', nursingNote: 'Ayak dış yanına basamama şikayeti (Jones kırığı şüphesi).', clinicalImportance: 'Avülsiyon (kopma) kırığı sıktır.' },
 
   // Sağ Ayak Falanksları (Başparmakta 2, diğerlerinde 3 = Toplam 14)
   { id: 'pedal_proximal_phalanx_1_r', latin: 'Phalanx Proximalis I Dextra (Pedis)', turkish: '1. Yakın Parmak Kemiği (Sağ Ayak Başparmağı)', english: 'Proximal Phalanx 1st Toe (Right)', region: 'Alt Ekstremite', mnemonic: 'Büyük parmak (Hallux).', nursingNote: 'Diyabetik ayak ampütasyonları en sık başparmaktan başlar. Parmak aralarının nemli kalmaması, kurulanması (mantar olmaması için) öğretilir.', clinicalImportance: 'Halluks rigidus (kireçlenmesi) yürümeyi engeller.' },

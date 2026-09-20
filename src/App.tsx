@@ -473,7 +473,7 @@ Hemşirelik Anatomisi
 
       <div className="space-y-3">
         {[
-          { icon: Star, label: `Favorilerim (${favorites.length})`, color: 'text-yellow-400` },
+          { icon: Star, label: `Favorilerim (${favorites.length})`, color: 'text-yellow-400' },
           { icon: FileText, label: 'Notlarım', color: 'text-blue-400' },
           { icon: Trophy, label: 'İlerleme İstatistikleri', color: 'text-green-400' },
         ].map(({ icon: Icon, label, color }) => (

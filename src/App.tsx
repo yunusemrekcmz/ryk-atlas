@@ -4,10 +4,6 @@ import { bonesData } from './bonesData';
 import { musclesData } from './musclesData';
 import { circulatoryData } from './circulatoryData';
 
-/* STREAMING_CHUNK:Initializing interfaces and data... */
-// ============================================================
-// TİP TANIMLARI
-// ============================================================
 interface AnatomicalStructure {
 id: string;
 latin: string;
@@ -21,9 +17,6 @@ articulations?: string;
 landmarks?: string;
 }
 
-// ============================================================
-// SİNİR SİSTEMİ (App.tsx içinde tutuyoruz)
-// ============================================================
 const nervousData: AnatomicalStructure[] = [
 { id: 'frontal', latin: 'Lobus Frontalis', turkish: 'Frontal Lob', english: 'Frontal Lobe', region: 'Beyin', mnemonic: 'Ön lob = Kişilik, karar verme', nursingNote: 'Frontal lob hasarında kişilik değişir', clinicalImportance: 'Travma, tümör, demans' },
 { id: 'parietal', latin: 'Lobus Parietalis', turkish: 'Parietal Lob', english: 'Parietal Lobe', region: 'Beyin', mnemonic: 'DuYu = Parietal', nursingNote: 'Dokunma, ağrı, ısı algısı', clinicalImportance: 'İnme, duyu kaybı' },
@@ -37,10 +30,6 @@ const nervousData: AnatomicalStructure[] = [
 { id: 'corpus-callosum', latin: 'Corpus Callosum', turkish: 'Korpus Kallozum', english: 'Corpus Callosum', region: 'Beyin', mnemonic: 'İki yarımküre bağlantısı', nursingNote: 'Epilepside kesilebilir', clinicalImportance: 'Split-brain' },
 ];
 
-/* STREAMING_CHUNK:Defining systems and quiz data... */
-// ============================================================
-// SİSTEMLER LİSTESİ
-// ============================================================
 const systems = [
 { id: 'skeletal', title: 'İskelet Sistemi', emoji: '🦴', color: 'from-slate-600 to-slate-800', data: bonesData },
 { id: 'muscular', title: 'Kas Sistemi', emoji: '💪', color: 'from-red-500 to-red-700', data: musclesData },
@@ -48,9 +37,6 @@ const systems = [
 { id: 'nervous', title: 'Sinir Sistemi', emoji: '🧠', color: 'from-purple-500 to-purple-700', data: nervousData },
 ];
 
-// ============================================================
-// QUIZ SORULARI
-// ============================================================
 const quizQuestions = [
 { question: 'İnsan vücudunun en uzun kemiği hangisidir?', options: ['Humerus', 'Tibia', 'Femur', 'Radius'], correct: 2 },
 { question: 'Vücudun en büyük iç organı hangisidir?', options: ['Kalp', 'Karaciğer', 'Akciğer', 'Beyin'], correct: 1 },
@@ -64,43 +50,31 @@ const quizQuestions = [
 { question: 'Beyinin kaç ana lobu vardır?', options: ['2', '3', '4', '5'], correct: 2 },
 ];
 
-/* STREAMING_CHUNK:Setting up App component and state... */
-// ============================================================
-// ANA UYGULAMA
-// ============================================================
 const AnatomyAtlasApp: React.FC = () => {
 const [currentView, setCurrentView] = useState<'explore' | 'quiz' | 'assistant' | 'profile'>('explore');
 const [searchQuery, setSearchQuery] = useState('');
 const [selectedSystem, setSelectedSystem] = useState<typeof systems[0] | null>(null);
 const [selectedItem, setSelectedItem] = useState<AnatomicalStructure | null>(null);
 
-// Quiz state
 const [quizIndex, setQuizIndex] = useState(0);
 const [quizScore, setQuizScore] = useState(0);
 const [quizAnswered, setQuizAnswered] = useState<number | null>(null);
 const [quizFinished, setQuizFinished] = useState(false);
 
-// Assistant state
 const [chatInput, setChatInput] = useState('');
 const [chatMessages, setChatMessages] = useState([
 { sender: 'ai', text: 'Merhaba! Ben RYK Atlas asistanıyım. Organlar, kemikler, kaslar veya hemşirelik notları hakkında soru sorabilirsiniz.' },
 ]);
 const chatEndRef = useRef(null);
 
-// Favoriler
 const [favorites, setFavorites] = useState<string[]>([]);
 
-// Scroll to bottom when new chat message arrives
 useEffect(() => {
 if (currentView === 'assistant') {
 chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
 }
 }, [chatMessages, currentView]);
 
-/* STREAMING_CHUNK:Helper functions and chat logic... */
-// ============================================================
-// YARDIMCI FONKSİYONLAR
-// ============================================================
 const goBack = () => {
 if (selectedItem) setSelectedItem(null);
 else if (selectedSystem) setSelectedSystem(null);
@@ -118,7 +92,6 @@ const userMsg = { sender: 'user', text: chatInput };
 let aiText = 'Bu konuda spesifik bir bilgim yok. Bir organ, kemik, kas, enjeksiyon bölgesi veya acil durum (ör: CPR, Şok, Tansiyon) sorabilirsiniz.';
 const q = chatInput.toLowerCase();
 
-// 50+ Hemşirelik ve Anatomi Odaklı Kelime Algaritması
 if (q.includes('kemik') || q.includes('kaç kemik')) aiText = 'Yetişkin bir insanda tam 206 kemik bulunur. Bebeklerde ise bu sayı 270 civarındadır, büyüdükçe birleşirler.';
 else if (q.includes('femur') || q.includes('en uzun')) aiText = 'Femur (Uyluk Kemiği), vücudun en uzun ve en güçlü kemiğidir. Kırıklarında yüksek miktarda kanama (şok) riski vardır.';
 else if (q.includes('kalp') || q.includes('kardiyak')) aiText = 'Kalp 4 odacıklıdır (2 Atriyum, 2 Ventrikül). Sol ventrikül tüm vücuda kan pompaladığı için en kalın kas tabakasına sahiptir.';
@@ -128,35 +101,10 @@ else if (q.includes('beyin') || q.includes('sinir')) aiText = 'Beyin 4 ana lobda
 else if (q.includes('mide') || q.includes('sindirim')) aiText = 'Mide, besinleri kimyasal ve mekanik sindirir. NG sonda uygulamasında ölçüm: burun - kulak memesi - ksifoid çıkıntı.';
 else if (q.includes('böbrek') || q.includes('renal')) aiText = 'Böbrekler kanı süzer. Günlük idrar çıkışı yetişkinlerde 1.5 - 2 litredir. Saatlik 30cc altı oligüridir.';
 else if (q.includes('karaciğer') || q.includes('hepar')) aiText = 'Karaciğer (Hepar) en büyük iç organımızdır. Toksinleri temizler, safra üretir ve pıhtılaşma faktörlerini sentezler.';
-else if (q.includes('göz') || q.includes('oküler')) aiText = 'Görme siniri N. Opticus (2. Kranial Sinir). Pupilla ışık refleksi nörolojik muayenenin temelidir (PERRLA).';
-else if (q.includes('kulak') || q.includes('işitme')) aiText = 'Kulakta en küçük 3 kemik (Malleus, Incus, Stapes) bulunur. Denge organı da (Semicircular kanallar) buradadır.';
 else if (q.includes('enjeksiyon') || q.includes('im')) aiText = 'İM enjeksiyon için en güvenli bölge Ventrogluteal bölgedir. Çocuklarda ise Vastus Lateralis tercih edilir.';
 else if (q.includes('vital') || q.includes('yaşam bulguları')) aiText = 'Vital bulgular: Ateş (36.5-37.5°C), Nabız (60-100/dk), Solunum (12-20/dk), Tansiyon (120/80 mmHg) ve SpO2 (%95-100).';
-else if (q.includes('pozisyon') || q.includes('yatış')) aiText = 'Solunum sıkıntısında Fowler, şokta Trendelenburg, koma durumunda ise Sim\'s (yan yatış) pozisyonu verilir.';
-else if (q.includes('acil') || q.includes('kırmızı')) aiText = 'Acil durumlarda öncelik daima ABC\'dir: Airway (Hava Yolu), Breathing (Solunum), Circulation (Dolaşım).';
-else if (q.includes('cpr') || q.includes('masaj')) aiText = 'Yetişkin KPR: 30 kalp masajı, 2 suni solunum. Bası derinliği 5 cm, hızı dakikada 100-120 olmalıdır.';
-else if (q.includes('şok')) aiText = 'Şokta doku perfüzyonu bozulur. Hipovolemik (kan kaybı), Kardiyojenik, Anafilaktik ve Septik türleri vardır.';
-else if (q.includes('humerus')) aiText = 'Humerus üst kol kemiğidir. Gövde kırıklarında Radial sinir zedelenebilir.';
-else if (q.includes('radius') || q.includes('ulna')) aiText = 'Radius başparmak, Ulna serçe parmak tarafındadır. Nabız genellikle Radius (A. Radialis) üzerinden sayılır.';
-else if (q.includes('tibia') || q.includes('fibula')) aiText = 'Tibia ağırlık taşıyan ana kemiktir. Fibula ise ağırlık taşımaz ama dış malleolü (bilek dış kemiği) oluşturur.';
-else if (q.includes('patella')) aiText = 'Patella (Diz Kapağı), vücudun en büyük sesamoid kemiğidir. Quadriceps kasının kuvvetini artırır.';
-else if (q.includes('damar') || q.includes('iv')) aiText = 'Damar yolu (IV) genellikle koldaki V. Mediana Cubiti, V. Cephalica veya V. Basilica\'dan açılır.';
-else if (q.includes('arter') || q.includes('atardamar')) aiText = 'Arterler kalpten temiz kanı dokulara taşır (Pulmoner arter hariç). En büyük arter Aort\'tur.';
-else if (q.includes('ven') || q.includes('toplardamar')) aiText = 'Venler dokulardaki kirli kanı kalbe getirir (Pulmoner venler hariç). İçlerinde kapakçıklar bulunur.';
-else if (q.includes('nabız') || q.includes('pulse')) aiText = 'Yetişkin nabzı 60-100 arasıdır. 100 üzeri Taşikardi, 60 altı Bradikardi. Karotis, Radialis veya Femoralis\'ten bakılır.';
 else if (q.includes('tansiyon') || q.includes('kan basıncı')) aiText = 'Normal tansiyon 120/80 mmHg. 140/90 üzeri Hipertansiyon, 90/60 altı Hipotansiyon kabul edilir.';
-else if (q.includes('ateş')) aiText = 'Normal vücut ısısı 36.5-37.5°C\'dir. Timpanik, oral, aksiller veya rektal yolla ölçülebilir.';
-else if (q.includes('oksijen') || q.includes('spo2')) aiText = 'Normal SpO2 %95-100 arasıdır. KOAH hastalarında %88-92 arası hedeflenir.';
-else if (q.includes('sonda') || q.includes('kateter')) aiText = 'Üriner sonda (Foley) idrar çıkışını takip etmek veya mesaneyi boşaltmak için üretradan takılır.';
-else if (q.includes('steteskop')) aiText = 'Steteskop oskültasyon için kullanılır. Diyafram yüksek, çan (bell) düşük frekanslı sesler içindir.';
-else if (q.includes('ekg')) aiText = 'EKG kalbin elektriksel aktivitesini kaydeder. Standart 12 derivasyonludur.';
-else if (q.includes('radyoloji') || q.includes('röntgen')) aiText = 'Röntgen kemikleri, BT (Tomografi) yumuşak doku/kemik, MR ise beyin gibi dokuları iyi gösterir.';
-else if (q.includes('ağrı')) aiText = 'Ağrı 5. vital bulgudur. Subjektiftir ve 0-10 arası NRS veya VAS skalası ile değerlendirilir.';
-else if (q.includes('yara') || q.includes('bası')) aiText = 'Bası yaraları en çok topuk, sakrum ve iskium üzerinde açılır. En iyi önlem 2 saatte bir pozisyondur.';
-else if (q.includes('kırık')) aiText = 'Kırıklarda 5P bulgusu aranır: Ağrı, Solukluk, Nabızsızlık, Uyuşma, Felç (Kompartman sendromu takibi).';
-else if (q.includes('kanama')) aiText = 'Dış kanamalarda ilk müdahale temiz bir bezle doğrudan baskı (direkt bası) yapmaktır.';
-else if (q.includes('quiz') || q.includes('sınav')) aiText = 'Aşağıdaki "Sınav" sekmesinden anatomi bilginizi test edebilirsiniz!';
-else if (q.includes('omurga') || q.includes('vertebra')) aiText = 'Omurga 33 (veya 26 birleşik) omurdan oluşur. Cervical (7), Thoracic (12), Lumbar (5), Sacrum (5), Coccyx (4).';
+else if (q.includes('cpr') || q.includes('masaj')) aiText = 'Yetişkin KPR: 30 kalp masajı, 2 suni solunum. Bası derinliği 5 cm, hızı dakikada 100-120 olmalıdır.';
 
 setChatMessages((prev) => [...prev, userMsg, { sender: 'ai', text: aiText }]);
 setChatInput('');
@@ -164,10 +112,6 @@ setChatInput('');
 
 };
 
-/* STREAMING_CHUNK:Filtering logic... */
-// ============================================================
-// FİLTRELEME
-// ============================================================
 const filteredSystems = systems.filter((s) =>
 s.title.toLowerCase().includes(searchQuery.toLowerCase())
 );
@@ -180,10 +124,6 @@ item.turkish.toLowerCase().includes(searchQuery.toLowerCase())
 )
 : [];
 
-/* STREAMING_CHUNK:Rendering item details view... */
-// ============================================================
-// RENDER: DETAY
-// ============================================================
 if (selectedItem) {
 const isFav = favorites.includes(selectedItem.id);
 return (
@@ -250,19 +190,13 @@ return (
 
 }
 
-/* STREAMING_CHUNK:Rendering system list view... */
-// ============================================================
-// RENDER: SİSTEM LİSTESİ
-// ============================================================
 if (selectedSystem) {
-// Kategorilere ayırma (Region değerine göre grupla)
 const groupedItems = filteredItems.reduce((acc, item) => {
 if (!acc[item.region]) acc[item.region] = [];
 acc[item.region].push(item);
 return acc;
 }, {} as Record<string, AnatomicalStructure[]>);
 
-// 210 -> 206 Filtresi (Arama yokken İskelet Sistemiyse 206 göster)
 const totalCount = selectedSystem.id === 'skeletal' && searchQuery === '' ? 206 : filteredItems.length;
 
 return (
@@ -293,7 +227,7 @@ return (
 
       <div className="space-y-8">
         {Object.entries(groupedItems).map(([region, items]) => (
-          <div key={region} className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div key={region}>
             <h3 className="text-blue-400 font-bold mb-3 px-1 text-sm tracking-widest uppercase opacity-80 flex items-center gap-2">
                <div className="h-px bg-slate-800 flex-1"></div>
                {region}
@@ -327,10 +261,6 @@ return (
 
 }
 
-/* STREAMING_CHUNK:Rendering main layout and navigation... */
-// ============================================================
-// RENDER: ANA EKRAN
-// ============================================================
 return (
 
 
@@ -392,7 +322,7 @@ Hemşirelik Anatomisi
               if (quizAnswered !== null) {
                 if (isCorrect) cls = 'bg-green-600/20 border-green-500/50 text-green-400';
                 else if (isSelected) cls = 'bg-red-600/20 border-red-500/50 text-red-400';
-                else cls = 'bg-slate-800/50 border-slate-800 opacity-50'; // Unselected disabled state
+                else cls = 'bg-slate-800/50 border-slate-800 opacity-50';
               }
 
               return (
@@ -451,10 +381,7 @@ Hemşirelik Anatomisi
 
   {currentView === 'assistant' && (
     <main className="px-4 max-w-2xl mx-auto h-[calc(100vh-140px)] flex flex-col">
-      
       <div className="flex-1 bg-slate-900/50 backdrop-blur-xl border border-slate-800 rounded-3xl overflow-hidden flex flex-col shadow-2xl relative">
-         
-         {/* Assistant Header */}
          <div className="bg-slate-900/80 px-6 py-4 border-b border-slate-800 flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg">
                <Bot className="w-5 h-5 text-white" />
@@ -468,15 +395,10 @@ Hemşirelik Anatomisi
             </div>
          </div>
 
-         {/* Chat Messages */}
-        <div className="flex-1 p-5 overflow-y-auto space-y-4 scroll-smooth">
+        <div className="flex-1 p-5 overflow-y-auto space-y-4">
           {chatMessages.map((m, i) => (
-            <div
-              key={i}
-              className={`flex ${m.sender === 'user' ? 'justify-end' : 'justify-start'}`}
-            >
-              <div
-                className={`p-3.5 px-5 text-[15px] leading-relaxed shadow-sm max-w-[85%] ${
+            <div key={i} className={`flex ${m.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
+              <div className={`p-3.5 px-5 text-[15px] leading-relaxed shadow-sm max-w-[85%] ${
                   m.sender === 'user' 
                     ? 'bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-2xl rounded-tr-sm' 
                     : 'bg-slate-800 border border-slate-700/50 text-slate-100 rounded-2xl rounded-tl-sm'
@@ -489,20 +411,18 @@ Hemşirelik Anatomisi
           <div ref={chatEndRef} />
         </div>
 
-        {/* Quick Prompts */}
-        <div className="px-5 pb-2 pt-2 overflow-x-auto flex gap-2 no-scrollbar">
+        <div className="px-5 pb-2 pt-2 overflow-x-auto flex gap-2">
           {['En uzun kemik?', 'Tansiyon nedir?', 'Kalbi anlat'].map((q) => (
             <button
               key={q}
               onClick={() => setChatInput(q)}
-              className="bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 hover:border-slate-600 rounded-full px-4 py-1.5 text-xs font-medium whitespace-nowrap transition-colors"
+              className="bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 rounded-full px-4 py-1.5 text-xs font-medium whitespace-nowrap transition-colors"
             >
               {q}
             </button>
           ))}
         </div>
 
-        {/* Input Area */}
         <div className="p-4 bg-slate-900/80 border-t border-slate-800">
           <div className="flex gap-2 relative">
             <input
@@ -511,18 +431,17 @@ Hemşirelik Anatomisi
               onChange={(e) => setChatInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && sendChat()}
               placeholder="Bir soru sor..."
-              className="flex-1 py-3.5 pl-5 pr-12 bg-slate-950 border border-slate-700 focus:border-blue-500 rounded-full text-slate-100 focus:outline-none focus:ring-4 focus:ring-blue-500/20 transition-all placeholder:text-slate-500"
+              className="flex-1 py-3.5 pl-5 pr-12 bg-slate-950 border border-slate-700 focus:border-blue-500 rounded-full text-slate-100 focus:outline-none transition-all placeholder:text-slate-500"
             />
             <button 
               onClick={sendChat} 
               disabled={!chatInput.trim()}
-              className="absolute right-2 top-2 bottom-2 aspect-square bg-blue-600 hover:bg-blue-500 disabled:bg-slate-700 disabled:text-slate-500 text-white rounded-full flex items-center justify-center transition-all"
+              className="absolute right-2 top-2 bottom-2 aspect-square bg-blue-600 hover:bg-blue-500 disabled:bg-slate-700 text-white rounded-full flex items-center justify-center transition-all"
             >
               <ArrowUp className="w-5 h-5" />
             </button>
           </div>
         </div>
-
       </div>
     </main>
   )}
@@ -530,7 +449,7 @@ Hemşirelik Anatomisi
   {currentView === 'profile' && (
     <main className="px-4 max-w-xl mx-auto">
       <div className="text-center mb-8 pt-4">
-        <div className="w-24 h-24 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full mx-auto flex items-center justify-center mb-4 shadow-lg shadow-blue-900/20 border-4 border-slate-900">
+        <div className="w-24 h-24 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full mx-auto flex items-center justify-center mb-4 shadow-lg border-4 border-slate-900">
           <User className="w-10 h-10 text-white" />
         </div>
         <h2 className="text-2xl font-bold text-slate-100">Yunus Emre Kaçmaz</h2>
@@ -538,27 +457,18 @@ Hemşirelik Anatomisi
       </div>
 
       <div className="grid grid-cols-3 gap-3 mb-8">
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 text-center shadow-sm">
+        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 text-center">
           <p className="text-3xl font-extrabold text-blue-400 mb-1">{favorites.length}</p>
           <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Favori</p>
         </div>
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 text-center shadow-sm">
+        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 text-center">
           <p className="text-3xl font-extrabold text-green-400 mb-1">{quizScore}</p>
           <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Doğru</p>
         </div>
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 text-center shadow-sm">
+        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 text-center">
           <p className="text-3xl font-extrabold text-orange-400 mb-1">3</p>
           <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Günlük</p>
         </div>
-      </div>
-
-      <h3 className="text-xs font-bold text-slate-500 mb-3 px-1 tracking-widest uppercase">Kazanılan Rozetler</h3>
-      <div className="grid grid-cols-4 gap-3 mb-8">
-        {['🏅', '🎯', '🦴', '🔥'].map((emoji, i) => (
-          <div key={i} className="bg-slate-900 border border-slate-800 rounded-2xl p-4 text-center shadow-sm flex items-center justify-center hover:scale-105 transition-transform cursor-default">
-            <span className="text-3xl drop-shadow-sm">{emoji}</span>
-          </div>
-        ))}
       </div>
 
       <div className="space-y-3">
@@ -584,8 +494,7 @@ Hemşirelik Anatomisi
     </main>
   )}
 
-  {/* ALT MENÜ */}
-  <nav className="fixed bottom-0 left-0 right-0 bg-slate-950/90 backdrop-blur-xl border-t border-slate-800 flex justify-around p-2 pb-safe z-50">
+  <nav className="fixed bottom-0 left-0 right-0 bg-slate-950/90 backdrop-blur-xl border-t border-slate-800 flex justify-around p-2 z-50">
     {[
       { id: 'explore', icon: Compass, label: 'Keşfet' },
       { id: 'quiz', icon: GraduationCap, label: 'Sınav' },
@@ -603,17 +512,10 @@ Hemşirelik Anatomisi
             setSearchQuery('');
           }}
           className={`flex flex-col items-center gap-1.5 p-2 rounded-2xl w-16 transition-all duration-300 ${
-            isActive 
-              ? 'text-blue-400 -translate-y-1' 
-              : 'text-slate-500 hover:text-slate-300 hover:bg-slate-900'
+            isActive ? 'text-blue-400 -translate-y-1' : 'text-slate-500 hover:text-slate-300 hover:bg-slate-900'
           }`}
         >
-          <div className={`relative ${isActive ? 'animate-bounce-short' : ''}`}>
-             <Icon className={`w-6 h-6 ${isActive ? 'fill-blue-400/20' : ''}`} />
-             {isActive && (
-                <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1 h-1 bg-blue-400 rounded-full"></span>
-             )}
-          </div>
+          <Icon className={`w-6 h-6 ${isActive ? 'fill-blue-400/20' : ''}`} />
           <span className={`text-[10px] font-semibold tracking-wide ${isActive ? 'opacity-100' : 'opacity-70'}`}>
             {label}
           </span>
@@ -621,22 +523,10 @@ Hemşirelik Anatomisi
       );
     })}
   </nav>
-  
-  {/* Global Style for Safe Area (iPhone X+) and Animations */}
-  <style>{`
-    .pb-safe { padding-bottom: env(safe-area-inset-bottom, 1rem); }
-    .no-scrollbar::-webkit-scrollbar { display: none; }
-    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-    @keyframes bounce-short {
-       0%, 100% { transform: translateY(0); }
-       50% { transform: translateY(-20%); }
-    }
-    .animate-bounce-short { animation: bounce-short 0.4s ease-in-out 1; }
-  `}</style>
 </div>
 
 
 );
 };
 
-export default AnatomyAtlasApp;é
+export default AnatomyAtlasApp;

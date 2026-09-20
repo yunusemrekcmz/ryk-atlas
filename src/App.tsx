@@ -1694,12 +1694,17 @@ const AnatomyAtlasApp = () => {
   }
 
   // ============================================================
+  // ============================================================
   // SİSTEM LİSTE GÖRÜNÜMÜ
   // ============================================================
   if (selectedSystem) {
+    // 1. Gruplama İşlemi
     const groupedItems = filteredItems.reduce((acc, item) => {
-      if (!acc[item.region]) acc[item.region] = [];
-      acc[item.region].push(item);
+      const region = item.region || 'Diğer';
+      if (!acc[region]) {
+        acc[region] = [];
+      }
+      acc[region].push(item);
       return acc;
     }, {});
 
@@ -1732,7 +1737,8 @@ const AnatomyAtlasApp = () => {
           <p className="text-sm font-medium text-slate-400 mb-6 px-1">{totalCount} yapı bulundu</p>
 
           <div className="space-y-8">
-            {Object.entries(groupedItems).map(([region, items]) => (
+            {/* 2. Render İşlemi (Düzeltildi) */}
+            {Object.keys(groupedItems).map((region) => (
               <div key={region}>
                 <h3 className="text-blue-400 font-bold mb-3 px-1 text-sm tracking-widest uppercase opacity-80 flex items-center gap-2">
                   <div className="h-px bg-slate-800 flex-1"></div>
@@ -1740,9 +1746,9 @@ const AnatomyAtlasApp = () => {
                   <div className="h-px bg-slate-800 flex-1"></div>
                 </h3>
                 <div className="space-y-2">
-                  {items.map((item) => (
+                  {groupedItems[region].map((item, index) => (
                     <button
-                      key={item.id}
+                      key={`${item.id}-${index}`}
                       onClick={() => setSelectedItem(item)}
                       className="w-full bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 rounded-2xl p-4 text-left transition-all active:scale-[0.98]"
                     >
@@ -1753,7 +1759,7 @@ const AnatomyAtlasApp = () => {
                 </div>
               </div>
             ))}
-            
+
             {filteredItems.length === 0 && (
               <div className="text-center py-12">
                 <p className="text-slate-500 text-lg">Arama sonucu bulunamadı.</p>
